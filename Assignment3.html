@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different ways to create function in Javascript</title>
+   
+</head>
+<body>
+    <h1>Ways to create JavaScript function</h1>
+    <script>
+    //function declaration
+    function addNumbers(a,b){
+        return a+b;
+    }
+    let result= addNumbers(4,5);
+    document.write("Addition of two numbers is: "+result+"<br>");
+
+    //function expression
+    const multiplyNumbers = function(c, d) {
+        return c * d;
+    };
+
+    let result1= multiplyNumbers(10,5);
+    document.write("Multiplication  of two numbers is :"+result1 +"<br>" );
+
+    //Arrow Function
+    const substractNumbers = (x,y) => x-y;
+    let result2 = substractNumbers(15,12);
+    document.write("Subtraction of two number is: "+result2+"<br>");
+
+    //Immediately invoked function expresssion
+    const result3 = (function(a, b) {
+        return a / b;
+        })(30, 6);
+        document.write("Division of two numbers is :"+result3+"<br>")
+
+    //Generator function with ("yield")
+    function* generateNumbers() {
+     yield 1;
+     yield 2;
+     yield 3;
+        }
+    const iterator = generateNumbers();
+    document.write("======output of generateNumbers is =======<br>");
+    document.write(iterator.next().value+"<br>"); 
+    document.write(iterator.next().value+"<br>"); 
+    document.write(iterator.next().value+"<br>"); 
+
+    //Using constructor
+    const myFunction = new Function("u", "v", "return u * v");
+    document.write("=======myFunction output is=======<br>")
+    document.write(myFunction(7,6)+"<br>");
+
+    //Anonymous Function
+    const x = function (a, b) {return a / b};
+    document.write("========Anonymous function output is=========<br>");
+    document.write(x(36,9));
+    
+    </script>
+    
+</body>
+</html>

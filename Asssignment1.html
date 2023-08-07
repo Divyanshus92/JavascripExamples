@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><title>JavaScript Loops, Operators, and Conditions</title></title>
+</head>
+<body>
+
+  <script>
+    
+    function factorial(number) {
+      let result = 1;
+      let i = 1;
+      while (i <= number) {
+        result *= i;
+        i++;
+      }
+      return result;
+    }
+
+   
+    function sumOfEvenNumbers(limit) {
+      let sum = 0;
+      for (let i = 2; i <= limit; i += 2) {
+        sum += i;
+      }
+      return sum;
+    }
+
+    function checkNumber(num) {
+      if (num > 0) {
+        return 'Positive';
+      } else if (num < 0) {
+        return 'Negative';
+      } else {
+        return 'Zero';
+      }
+    }
+
+   
+    const numberForFactorial = 5;
+    document.write(`Factorial of ${numberForFactorial}: ${factorial(numberForFactorial)} <br>`);
+
+    const limitForSum = 10;
+    document.write(`Sum of even numbers from 1 to ${limitForSum}: ${sumOfEvenNumbers(limitForSum)}<br>`);
+
+    const numToCheck = -8;
+    document.write(`Number ${numToCheck} is ${checkNumber(numToCheck)}<br>`);
+  </script>
+
+</body>
+</html>

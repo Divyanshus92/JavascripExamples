@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //let
+    let x = 10;
+    if (true) {
+    let x = 20;
+    console.log(x); 
+    }
+    console.log(x); 
+
+    //Arrow Functions
+    function add(a, b) {
+    return a + b;
+    }
+    const addArrow = (a, b) => a + b;
+    console.log(addArrow(2, 3)); 
+
+    //Default Parameters
+    function greet(name = "Guest") {
+    console.log(`Hello, ${name}!`);
+    }
+
+    greet(); 
+    greet("John");
+
+    //Template Literals
+
+    const name = "Alice";
+    const age = 30;
+
+    const message = `Hello, my name is ${name} and I am ${age} years old.`;
+    console.log(message);
+
+    //
+   
+
+
+   
+    </script>
+</body>
+</html>
